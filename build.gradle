@@ -4,7 +4,7 @@ plugins {
 }
 
 group 'com.github.huifer.plugin'
-version '1.0-SNAPSHOT'
+version '1.0'
 
 repositories {
     mavenCentral()
@@ -24,7 +24,5 @@ intellij {
     version '2020.2.1'
 }
 patchPluginXml {
-    changeNotes """
-      Add change notes here.<br>
-      <em>most HTML tags may be used</em>"""
+    changeNotes """gorm generator"""
 }

@@ -1,10 +1,10 @@
 <idea-plugin>
   <id>gorm-plugin</id>
   <name>gorm-gen</name>
-  <vendor email="huifer97@163.com" url="http://www.yourcompany.com">YourCompany</vendor>
+  <vendor email="huifer97@163.com" url="https://github.com/huifer">HuiFer</vendor>
 
   <description><![CDATA[
-        gorm gen
+        gorm generator. open help -> gorm-gen
     ]]></description>
 
   <!-- please see https://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
@@ -13,13 +13,13 @@
   <depends>com.intellij.modules.java</depends>
   <depends>com.intellij.modules.ultimate</depends>
   <depends>com.intellij.modules.idea</depends>
-  <depends>com.intellij.modules.idea.ultimate</depends>
+  <depends>com.intellij.modules.all</depends>
 
   <extensions defaultExtensionNs="com.intellij">
   </extensions>
 
   <actions>
-    <action id="A" class="com.github.huifer.plugin.gui.GormGen" text="gorm-gen" description="gorm-gen">
+    <action id="A" class="com.github.huifer.plugin.gui.GormGen" text="gorm-generator" description="gorm-generator">
       <add-to-group group-id="HelpMenu" anchor="last"/>
     </action>
   </actions>
