@@ -44,10 +44,10 @@ public class Dialog extends DialogWrapper {
       Table apply = SqlUtils.apply(sql);
 
       String path = textFieldWithBrowseButton.getText();
-      PATH = path;
       SQL = sql;
-      String[] split = path.split(File.separator);
-      String packageName = split[split.length - 1];
+
+      File f = new File(path);
+      String packageName = f.getName();
       String s = path + File.separator + CaseFormat.UPPER_UNDERSCORE
           .to(CaseFormat.UPPER_CAMEL, apply.getName()) + ".go";
 
@@ -56,8 +56,15 @@ public class Dialog extends DialogWrapper {
       StringBuilder sb = new StringBuilder(32);
       sb.append("package ").append(packageName);
       sb.append("\n\n");
+      sb.append("\n\n");
+      sb.append("import \"time\"");
       sb.append(string);
       try {
+
+        File fa = new File(s);
+        if (fa.exists()) {
+          fa.delete();
+        }
         FileUtil.WriteFile(s, sb.toString());
 
 
@@ -102,9 +109,6 @@ public class Dialog extends DialogWrapper {
         true, true);
     TextBrowseFolderListener listener = new TextBrowseFolderListener(chooserDescriptor);
     textFieldWithBrowseButton.addBrowseFolderListener(listener);
-    if (StringUtils.isNotBlank(PATH)) {
-      textFieldWithBrowseButton.setText("PATH");
-    }
     textFieldWithBrowseButton.setText("输入输出文件位置");
     selector_path.setLayout(new BorderLayout());
     selector_path.setPreferredSize(new Dimension(400, 40));
