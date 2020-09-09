@@ -56,8 +56,8 @@ public class Dialog extends DialogWrapper {
       StringBuilder sb = new StringBuilder(32);
       sb.append("package ").append(packageName);
       sb.append("\n\n");
-      sb.append("\n\n");
       sb.append("import \"time\"");
+      sb.append("\n\n");
       sb.append(string);
       try {
 
