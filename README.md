@@ -29,3 +29,4 @@ This plugin helps you to generate specific template code by create table sql
 
 
 ## License
+- [Apache 2.0](/LICENSE)
