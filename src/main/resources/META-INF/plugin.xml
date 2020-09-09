@@ -4,7 +4,7 @@
   <vendor email="huifer97@163.com" url="https://github.com/huifer">HuiFer</vendor>
 
   <description><![CDATA[
-        gorm generator. open help -> gorm-gen
+    This plugin helps you to generate specific template code by create table sql
     ]]></description>
 
   <!-- please see https://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html

@@ -24,5 +24,5 @@ intellij {
     version '2020.2.1'
 }
 patchPluginXml {
-    changeNotes """gorm generator"""
+    changeNotes """feat: From creating table SQL to go structure"""
 }
